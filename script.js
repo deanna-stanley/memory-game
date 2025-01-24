@@ -156,6 +156,7 @@ playAgainButton.addEventListener("click", function(event) {
     cards[i].remove();
   }
   score = 0;
+  scoreSpan.innerText = score;
   numColors = input.value - 1;
   lowScoreSpan.innerText = lowScoreArray[numColors];
   deck = buildDeck();
