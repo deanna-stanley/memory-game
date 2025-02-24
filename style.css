@@ -12,10 +12,6 @@ body {
   display: inline-block;
 }
 
-#playAgain {
-  visibility: hidden;
-}
-
 #scores p {
   font-size: 2em;
 }

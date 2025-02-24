@@ -125,7 +125,7 @@ function handleCardClick(event) {
       numMatches++;
       if (numMatches === parseInt(input.value,10)) {
         numMatches = 0;
-        playAgainButton.style.visibility = "visible";
+        playAgainButton.hidden = false;
         if (lowScoreArray[numColors] !== "") {
           if (score < lowScoreArray[numColors]) {
             lowScoreArray[numColors] = score;
@@ -146,7 +146,7 @@ function handleCardClick(event) {
 startButton.addEventListener("click", function(event) {
   deck = buildDeck();
   createDivsForColors(deck);
-  startButton.style.visibility = "hidden";
+  startButton.hidden = true;
   numColors = input.value - 1;
 });
 
@@ -161,7 +161,7 @@ playAgainButton.addEventListener("click", function(event) {
   lowScoreSpan.innerText = lowScoreArray[numColors];
   deck = buildDeck();
   createDivsForColors(deck);
-  playAgainButton.style.visibility = "hidden";
+  playAgainButton.hidden = true;
 });
 
 lowScoreSpan.innerText = lowScoreArray[numColors];
